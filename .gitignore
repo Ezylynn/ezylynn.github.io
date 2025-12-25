@@ -1,0 +1,5 @@
+site/
+venv
+index.md
+standard_template.md 
+term_template.md
