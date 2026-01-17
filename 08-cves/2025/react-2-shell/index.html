@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		
+		<link rel="canonical" href="https://github.com/Ezylynn/ezylynn.github.io.git/08-cves/2025/react-2-shell/">
+		<link rel="shortcut icon" href="../../../img/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>CVE-2025-55182— React2Shell - WWIA</title>
+		<link href="../../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../../css/font-awesome-5.12.2-all.min.css" rel="stylesheet">
+		<link href="../../../css/base.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../../css/highlight-github.css">
+		<link href="../../../extras/style.css" rel="stylesheet">
+		<script src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../../js/highlight.pack.js"></script>
+		
+		<script>
+			var base_url = '../../..';
+			var home_url = '../../../home';
+			var is_outer_page = false;
+			
+			var pageToc = [
+				{title: "CVE-2025-55182\u2014 React2Shell", url: "#_top", children: [
+						
+				{title: "Summary", url: "#_top", children: [
+				]},
+				{title: "Affected", url: "#affected", children: [
+				]},
+				{title: "Vulnerability", url: "#vulnerability", children: [
+				]},
+				{title: "Root Cause", url: "#root-cause", children: [
+				]},
+				{title: "- React offers Server Functions (RPC over HTTP), used to fetch data from adjacent peers to ensure low latency, or perform authenticated requests", url: "#-react-offers-server-functions-rpc-over-http-used-to-fetch-data-from-adjacent-peers-to-ensure-low-latency-or-perform-authenticated-requests", children: [
+				]},
+				{title: "Exploitation (High-Level)", url: "#exploitation-high-level", children: [
+				]},
+				{title: "Impact", url: "#impact", children: [
+				]},
+				{title: "Detection", url: "#detection", children: [
+				]},
+				{title: "Mitigation", url: "#mitigation", children: [
+				]},
+				{title: "Key Takeaways", url: "#key-takeaways", children: [
+				]},
+				{title: "References", url: "#references", children: [
+				]},
+				]},
+			];
+
+		</script>
+		<script src="../../../js/base.js"></script> 
+	</head>
+
+	<body class="inner-page">
+		
+
+		<div class="container-fluid wm-page-content">
+			<a name="_top" aria-hidden="true"></a>
+			
+
+			<h1 id="cve-2025-55182-react2shell">CVE-2025-55182— React2Shell</h1>
+<h2 id="summary">Summary</h2>
+<p>This vulnerabilit allow RCE in React Server Functions through insecure prototype references</p>
+<hr />
+<h2 id="affected">Affected</h2>
+<ul>
+<li>Product / Versions:</li>
+<li>Required configuration (if any):</li>
+</ul>
+<hr />
+<h2 id="vulnerability">Vulnerability</h2>
+<ul>
+<li>RCE</li>
+</ul>
+<hr />
+<h2 id="root-cause">Root Cause</h2>
+<h2 id="-react-offers-server-functions-rpc-over-http-used-to-fetch-data-from-adjacent-peers-to-ensure-low-latency-or-perform-authenticated-requests">- React offers Server Functions (RPC over HTTP), used to fetch data from adjacent peers to ensure low latency, or perform authenticated requests</h2>
+<h2 id="exploitation-high-level">Exploitation (High-Level)</h2>
+<ul>
+<li>Attack vector</li>
+<li>Preconditions (auth, access, interaction)</li>
+<li>Broken assumptions</li>
+</ul>
+<hr />
+<h2 id="impact">Impact</h2>
+<ul>
+<li>CIA impact</li>
+<li>Privilege or trust boundary crossed</li>
+</ul>
+<hr />
+<h2 id="detection">Detection</h2>
+<p>Observable indicators or behaviors (high-level).</p>
+<hr />
+<h2 id="mitigation">Mitigation</h2>
+<ul>
+<li>Patch / upgrade</li>
+<li>Config or compensating controls</li>
+</ul>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Concepts reinforced (e.g. trust boundaries, least privilege).</p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>NVD</li>
+<li>Vendor advisory</li>
+<li>Independent analysis</li>
+</ul>
+
+			<br>
+			
+
+			<br>
+		</div>
+
+		<footer class="container-fluid wm-page-content text-center small">
+			<details>
+				<summary>
+					Documentation built with <a href="http://www.mkdocs.org/" target="_blank">MkDocs</a> using  <a href="https://github.com/Siphalor/mkdocs-custommill" target="_blank">CustomMill</a>.
+				</summary>
+				<h6 class="mt-2">Additional Licenses</h6>
+				<ul><li>
+						CustomMill is based on the <a href="https://github.com/gristlabs/mkdocs-windmill" target="_blank">Windmill</a> theme by Grist Labs, licensed under the <a href="https://github.com/gristlabs/mkdocs-windmill/blob/master/LICENSE" target="_blank">MIT License</a>
+					</li>
+					<li>
+						CustomMill includes <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> version 5.1.3. This is available under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT License</a>.
+					</li>
+					<li>
+						Syntax highlighting is implemented via <a href="https://highlightjs.org" target="_blank">highlight.js</a> licensed under the BSD 3-Clause License and the included github styling made by Vasily Polovnyov.
+					</li>
+					<li>
+						Icons on this site are from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> which is licensed under the <a href="https://fontawesome.com/license/free" target="_blank">Font Awesome Free License</a>.
+					</li></ul>
+				<p>Built at 2026-01-17 10:57:48 UTC</p>
+			</details>
+		</footer>
+
+		
+	</body>
+</html>

@@ -1,229 +1,259 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Ezylynn/ezylynn.github.io.git/07-glossary/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>YAML - WWIA</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "YAML";
-        var mkdocs_page_input_path = "07-glossary/index.md";
-        var mkdocs_page_url = "/Ezylynn/ezylynn.github.io.git/07-glossary/";
-      </script>
-    
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
-      <script>hljs.highlightAll();</script> 
-</head>
+<html lang="en">
+	<head>
+		
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		
+		<link rel="canonical" href="https://github.com/Ezylynn/ezylynn.github.io.git/07-glossary/">
+		<link rel="shortcut icon" href="../img/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>YAML (YAML Ain't Markup Language) - WWIA</title>
+		<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/font-awesome-5.12.2-all.min.css" rel="stylesheet">
+		<link href="../css/base.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/highlight-github.css">
+		<link href="../extras/style.css" rel="stylesheet">
+		<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../js/highlight.pack.js"></script>
+		
+		<script>
+			var base_url = '..';
+			var home_url = '../home';
+			var is_outer_page = false;
+			
+			var pageToc = [
+				{title: "YAML (YAML Ain\u0027t Markup Language)", url: "#_top", children: [
+				]},
+				{title: "JSON (JavaScript Object Notation)", url: "#json-javascript-object-notation", children: [
+				]},
+				{title: "XML (eXtensible Markup Language)", url: "#xml-extensible-markup-language", children: [
+				]},
+				{title: "Static", url: "#static", children: [
+				]},
+				{title: "Base64", url: "#base64", children: [
+				]},
+				{title: "Base32", url: "#base32", children: [
+				]},
+				{title: "Parsing", url: "#parsing", children: [
+				]},
+				{title: "Tokenization", url: "#tokenization", children: [
+				]},
+				{title: "VPN (Virtual Private Network)", url: "#vpn-virtual-private-network", children: [
+				]},
+				{title: "Virtual Environment", url: "#virtual-environment", children: [
+				]},
+				{title: "Ports", url: "#ports", children: [
+				]},
+				{title: "Torrents", url: "#torrents", children: [
+				]},
+				{title: "UTF-8", url: "#utf-8", children: [
+				]},
+				{title: "Terminal", url: "#terminal", children: [
+				]},
+				{title: "Shell", url: "#shell", children: [
+				]},
+				{title: "Kernel", url: "#kernel", children: [
+				]},
+				{title: "TUI", url: "#tui", children: [
+				]},
+			];
 
-<body class="wy-body-for-nav" role="document">
+		</script>
+		<script src="../js/base.js"></script> 
+	</head>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> WWIA
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+	<body class="inner-page">
+		
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Foundations</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../01-foundations/">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Networking</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../01-foundations/networking/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Operating Systems</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../01-foundations/operating-systems/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Memory & Execution</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../01-foundations/memory-and-execution/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Cryptography</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../01-foundations/cryptography/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Scripting</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../01-foundations/scripting/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Offensive Security</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../02-offensive-security/">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Reconnaissance</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../02-offensive-security/reconnaissance/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Initial Access</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../02-offensive-security/initial-access/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Exploitation</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../02-offensive-security/exploitation/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Post-Exploitation</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../02-offensive-security/post-exploitation/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Malware</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../02-offensive-security/malware/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Defensive Security</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../03-defensive-security/">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Prevention</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../03-defensive-security/prevention/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Detection</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../03-defensive-security/detection/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Monitoring & Response</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../03-defensive-security/monitoring-and-response/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" >Security Architecture</a>
-    <ul>
-                <li class="toctree-l2"><a class="" href="../03-defensive-security/security-architecture/index.md">Overview</a>
-                </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Concepts</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../04-concepts/">Overview</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">How-To ____</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../05-how-to/">Overview</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Demos & Projects</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../06-demos-projects/">Overview</a>
-                  </li>
-              </ul>
-      </div>
-    </div>
-    </nav>
+		<div class="container-fluid wm-page-content">
+			<a name="_top" aria-hidden="true"></a>
+			
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">WWIA</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">YAML</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="yaml">YAML</h1>
+			<h1 id="yaml-yaml-aint-markup-language">YAML (YAML Ain't Markup Language)</h1>
+<p><strong>Definition:</strong> A human-readable data serialization language used for config files and data exchange. </p>
+<p><strong>Applications</strong>: 
+- Allow humans to easily read or create config files
+- Typically store things a program would need at run time, without needing to hard code the values</p>
+<p><strong>ELIF:</strong> A general file format to store structured data that's way more readable to humans</p>
+<p><strong>Do not confuse with:</strong>
+- YAML is a superset of JSON, technically a YAML parser can understand JSON
+- YAML is more easily readable by humans while JSON has a more rigid structure</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-yaml">key: value
+list:
+  - item1
+  - item2
+</code></pre>
+<hr />
+<h1 id="json-javascript-object-notation">JSON (JavaScript Object Notation)</h1>
+<p><strong>Definition:</strong> A light-weight format for storing and transporting data. Syntactically identical to the code for creating JavaScript objects as it derives from JavaScript</p>
+<p><strong>Application:</strong>
+- Often used for light-weight data exchange between APIs and web servers
+- Storing config settings 
+- Used in security tokens JWTs (JSON Web Tokens) for authentication purposes </p>
+<p><strong>ELIF:</strong> A way to store data in text in an organized way instead of XML or binary formats </p>
+<p><strong>Example:</strong> </p>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;Example Item&quot;,
+  &quot;enabled&quot;: true,
+  &quot;count&quot;: 3,
+  &quot;tags&quot;: [
+    &quot;example&quot;,
+    &quot;demo&quot;
+  ],
+  &quot;details&quot;: {
+    &quot;owner&quot;: &quot;Alice&quot;,
+    &quot;priority&quot;: &quot;medium&quot;
+  }
+}
+</code></pre>
+<hr />
+<h1 id="xml-extensible-markup-language">XML (eXtensible Markup Language)</h1>
+<p><strong>Definition:</strong> A language/file structure designed to store and transport data</p>
+<p><strong>ELIF:</strong> Basically HTML but it doesn't do ANYTHING, just information wrapped in tags</p>
+<p><strong>Application:</strong>
+- XML was designed to carry data, not display them unlike HTML
+- XML tags and document structure must be defined manually by users 
+- Stores data in plain text format, providing a software &amp; hardware independent way of storing, transporting and sharing data</p>
+<p><strong>Do not confuse with:</strong> HTML </p>
+<hr />
+<h1 id="static">Static</h1>
+<p><strong>Definition in Java context:</strong> The <code>static</code> members (variable, methods, nested class) belongs to the class itself, not to any specific object (instance) of that class.</p>
+<p><strong>Definition in website context:</strong> Describe pages with fixed content that appears the same to every user, without any real-time, server side processing or interaction with database</p>
+<p><strong>Definition in IP address context:</strong> An IP address that does not change frequently. Used in cases of hosting, web servers and secure communications</p>
+<hr />
+<h1 id="base64">Base64</h1>
+<p><strong>Definition:</strong> A binary-to-text encoding that uses 64 printable characters, with each character represents 6 bits to maintain integrity of data</p>
+<p><strong>ELIF:</strong> A way of transforming data into clean, safe data that will make sure data does not get change passing through systems</p>
+<p><strong>Application:</strong>
+- Includes upper/lowercase English letters, digits 0-9 &amp; plus (+) and forward slash (/)
+- Makes data 33% larger in memory usage, should only use when necessary
+- Does not contain special characters that might be interpret as special commands 
+- Ensure data doesn't get corrupted when systems expect clean readable texts
+- Note safe for URL</p>
+<hr />
+<h1 id="base32">Base32</h1>
+<p><strong>Definition:</strong> A binary-to-text encoding that uses 32 printable chracters, each character are 5 bits in length</p>
+<p><strong>ELIF:</strong> Same shit like Base64 but less bits used</p>
+<p><strong>Application:</strong>
+- Allow data to be passed to a system that accepts single-byte character input, or UTF-8 encoded string input or appended to a URL without being mangled
+- Use in URLs as Base64 have those troubling symbols and may be treated specially </p>
+<hr />
+<h1 id="parsing">Parsing</h1>
+<p><strong>Definition:</strong>The process of analyzing a sequence of data (string/bytes) into its components (tokens) for computers to work with reliably </p>
+<p><strong>ELIF:</strong> Turning some kind of data into another kind of data but with structures</p>
+<p><strong>Application:</strong>
+- Apply <code>grammar</code> to tokens to build structure</p>
+<p><strong>Do not confuse with:</strong>
+- Parsing is not transforming one thing into another, that's the job of the compiler. Parsing is one of the step to compile a program 
+- Parsing does not extract meaning from a text, that's semantic analysis, a step of the compiling process</p>
+<hr />
+<h1 id="tokenization">Tokenization</h1>
+<p><strong>Definition:</strong> Breaking down stream of characters into smaller, meaningful units called tokens</p>
+<p><strong>ELIF:</strong> </p>
+<p><strong>Application:</strong>
+- After broken down into tokens --&gt; pass through parser
+- Part of the broader process of processing raw inputs into structured meaning that your program can work with
+- Use case in compilers, intepreters, data deserialization, protocol message decoding </p>
+<hr />
+<h1 id="vpn-virtual-private-network">VPN (Virtual Private Network)</h1>
+<p><strong>Definition:</strong> A private network that you can access from anywhere through an encrypted tunnel </p>
+<p><strong>ELIF:</strong> Establish a tunnel between VPN server and you, and send the traffic through there, which the VPN will forward to your intended destination </p>
+<p><strong>Application:</strong>
+- Can allow you to access restricted content, depending where VPN server is located
+- Self-host VPNs, allow to access network over the internet securely
+- If on HTTP, then allow to protect sensitive data and personal informationAllow to work remotely over the internet </p>
+<hr />
+<h1 id="virtual-environment">Virtual Environment</h1>
 <p><strong>Definition:</strong> One-line definition.</p>
 <p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
 <p><strong>Do not confuse with:</strong> <Term X></p>
-<h2 id="used-in-offensive-defensive"><strong>Used in:</strong> Offensive, Defensive</h2>
-              
-            </div>
-          </div><footer>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="ports">Ports</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="torrents">Torrents</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="utf-8">UTF-8</h1>
+<p><strong>Definition:</strong> Character encoding standard for electronic communicatiation. Variable-wdith encoding for Unicode 1-4 bytes long and backward compatible with ASCII</p>
+<p><strong>ELIF:</strong> a fucking table conversion from binary to character sets that supports over a million characters </p>
+<p><strong>Application:</strong>
+- Efficiently handles all Unicode characters so used in nearly all modern applications</p>
+<p><strong>Do not confuse with:</strong> ASCII as ASCII is 7-bit character encoding standards</p>
+<hr />
+<h1 id="terminal">Terminal</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="shell">Shell</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="kernel">Kernel</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
+<h1 id="tui">TUI</h1>
+<p><strong>Definition:</strong> One-line definition.</p>
+<p><strong>ELIF:</strong> Explain Like I'm 5</p>
+<p><strong>Application:</strong></p>
+<p><strong>Do not confuse with:</strong> <Term X></p>
+<p><strong>Used in:</strong> Offensive, Defensive</p>
+<hr />
 
-  <hr/>
+			<br>
+			
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
+			<br>
+		</div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
+		<footer class="container-fluid wm-page-content text-center small">
+			<details>
+				<summary>
+					Documentation built with <a href="http://www.mkdocs.org/" target="_blank">MkDocs</a> using  <a href="https://github.com/Siphalor/mkdocs-custommill" target="_blank">CustomMill</a>.
+				</summary>
+				<h6 class="mt-2">Additional Licenses</h6>
+				<ul><li>
+						CustomMill is based on the <a href="https://github.com/gristlabs/mkdocs-windmill" target="_blank">Windmill</a> theme by Grist Labs, licensed under the <a href="https://github.com/gristlabs/mkdocs-windmill/blob/master/LICENSE" target="_blank">MIT License</a>
+					</li>
+					<li>
+						CustomMill includes <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> version 5.1.3. This is available under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT License</a>.
+					</li>
+					<li>
+						Syntax highlighting is implemented via <a href="https://highlightjs.org" target="_blank">highlight.js</a> licensed under the BSD 3-Clause License and the included github styling made by Vasily Polovnyov.
+					</li>
+					<li>
+						Icons on this site are from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> which is licensed under the <a href="https://fontawesome.com/license/free" target="_blank">Font Awesome Free License</a>.
+					</li></ul>
+				<p>Built at 2026-01-17 10:57:48 UTC</p>
+			</details>
+		</footer>
 
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-  </span>
-</div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
-
-</body>
+		
+	</body>
 </html>
