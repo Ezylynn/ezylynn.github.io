@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		
+		<link rel="canonical" href="https://github.com/Ezylynn/ezylynn.github.io.git/01-foundations/networking/protocols/subnetting/">
+		<link rel="shortcut icon" href="../../../../img/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>subnetting - WWIA</title>
+		<link href="../../../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../../../css/font-awesome-5.12.2-all.min.css" rel="stylesheet">
+		<link href="../../../../css/base.css" rel="stylesheet">
+		<link rel="stylesheet" href="../../../../css/highlight-github.css">
+		<link href="../../../../extras/style.css" rel="stylesheet">
+		<script src="../../../../bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../../../js/highlight.pack.js"></script>
+		
+		<script>
+			var base_url = '../../../..';
+			var home_url = '../../../../home';
+			var is_outer_page = false;
+			
+			var pageToc = [
+				{title: "Subnetting", url: "#_top", children: [
+						
+				{title: "Summary", url: "#_top", children: [
+				]},
+				{title: "What this is", url: "#what-this-is", children: [
+				]},
+				{title: "8 attributes of subnetting", url: "#8-attributes-of-subnetting", children: [
+				]},
+				{title: "Subnet Mask vs CIDR", url: "#subnet-mask-vs-cidr", children: [
+				]},
+				{title: "How it works (high-level)", url: "#how-it-works-high-level", children: [
+				]},
+				{title: "Why it matters (security perspective)", url: "#why-it-matters-security-perspective", children: [
+				]},
+				{title: "Common pitfalls / misunderstandings", url: "#common-pitfalls-misunderstandings", children: [
+				]},
+				{title: "Related concepts", url: "#related-concepts", children: [
+				]},
+				{title: "References", url: "#references", children: [
+				]},
+				]},
+			];
+
+		</script>
+		<script src="../../../../js/base.js"></script> 
+	</head>
+
+	<body class="inner-page">
+		
+
+		<div class="container-fluid wm-page-content">
+			<a name="_top" aria-hidden="true"></a>
+			
+
+			<h1 id="subnetting">Subnetting</h1>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Subnetting is dividing a large network into smaller sub-networks, called subnets</li>
+<li>Each subnets allowed devices to talk efficiently and improve network performance, security and management</li>
+</ul>
+<hr />
+<h2 id="what-this-is">What this is</h2>
+<ul>
+<li>The process of splitting up one IP network into smaller IP networks  </li>
+<li>Done via subnet mask/ CIDR prefix to decide which bits of an IP address represent the network and host</li>
+<li>Tackling scale + control, allow to organize IP address and reduce unnecessary local traffic &amp; supporting <em>segmentation</em></li>
+</ul>
+<hr />
+<h2 id="8-attributes-of-subnetting">8 attributes of subnetting</h2>
+<ul>
+<li>Network ID: First IP address in each sub-network<ul>
+<li>Unique purpose - not allow to assign to users</li>
+<li>Allow routers to identify subnet along with CIDR/subnet mask</li>
+</ul>
+</li>
+<li>Broadcast IP: Last IP address in each sub-network<ul>
+<li>Unique purpose - not allow to assign to users</li>
+<li>Used to communicate with all IP addresses in sub-network</li>
+</ul>
+</li>
+<li>First Host IP: First host IP address after Network ID</li>
+<li>Last Host IP: Last host IP address before Broadcast IP</li>
+<li>Host IP: The IP address assigned to the user</li>
+<li>Next Network: The network ID of the next Sub-Network</li>
+<li>No. IP addresses: Number of IP addresses in sub-network</li>
+<li>CIDR(Classless Inter-Domain Routing)/Subnet-mask: Alt ways to identify size of subnet  <ul>
+<li>Example: A subnet mask <code>/24</code> means the first 24 bits (left to right) are part of the network ID, and the rest are the host ID
+    <code>255.255.255.0 = 11111111.11111111.11111111.00000000</code><ul>
+<li>Network ID: 192.168.1.0</li>
+<li>Broadcast IP: 192.168.1.255</li>
+<li>Host IP: 192.168.1.1 --&gt; 192.168.1.254</li>
+</ul>
+</li>
+<li>Example: A subnet mask of <code>/26</code> would mean that <code>255.255.255.192 = 11111111.11111111.11111111.11000000</code>
+    Network ID: 192.168.1.0
+    Broadcast IP: 192.168.1.63
+    Host IP: 192.168.1.1 → 192.168.1.62</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="subnet-mask-vs-cidr">Subnet Mask vs CIDR</h2>
+<ul>
+<li>A subnet mask is a 32-bit number used in IP addressing to seperate the network portion from host portion </li>
+<li>Allow devices to determine which part of an IP address refers to the network they're present &amp; which part refer to specific location within that network</li>
+</ul>
+<p><img alt="Subnet mask" src="../../../../assets/subnet_mask.jpg" /></p>
+<ul>
+<li>CIDR Notation uses a simple format which make it easier to read</li>
+<li>The number after the slash (/n) represents num of bits used for the network portion of the IP address</li>
+</ul>
+<hr />
+<h2 id="how-it-works-high-level">How it works (high-level)</h2>
+<p>Conceptual explanation only.
+No commands, no configs.
+Use diagrams if needed.</p>
+<hr />
+<h2 id="why-it-matters-security-perspective">Why it matters (security perspective)</h2>
+<ul>
+<li>Enables a single IP network to be divided into smaller logical network --&gt; More efficient IP address usage</li>
+<li>Improved security (segmentation) as subnets isolate departments, preventing unauthorized access</li>
+<li>Easier maintenance due to smaller segmented networks</li>
+<li>
+<p>Can prioritize traffic to different subnets</p>
+</li>
+<li>
+<p>Can lead to more complexitiy and higher cost due to increase in routers, communication layers and careful planning</p>
+</li>
+<li>Each subnet wastes 2 IP addresses, being network ID and broadcast IP</li>
+</ul>
+<hr />
+<h2 id="common-pitfalls-misunderstandings">Common pitfalls / misunderstandings</h2>
+<ul>
+<li>Subnetting only divides and segment the networks, it doesn't delete or remove the addresses<ul>
+<li>Example: 192.168.1.0/26 still have all 256 addresses, but has been divided into 4 subnets</li>
+<li>To work out how many subnets, we have 2 bits to used for the subnet &amp; 6 bits (64 values) for the host IPs</li>
+<li>The 2 bits are 128, 64 and there are 4 values: <code>00,01,10,11</code> </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="related-concepts">Related concepts</h2>
+<ul>
+<li><a href="../04-concepts/...">Concept A</a></li>
+<li><a href="../04-concepts/...">Concept B</a></li>
+</ul>
+<hr />
+<h2 id="references">References</h2>
+<p><img alt="Subnet refreshers" src="https://subnetipv4.com/" />
+<img alt="geeks4geeks" src="https://www.geeksforgeeks.org/computer-networks/introduction-to-subnetting/" /></p>
+
+			<br>
+			
+
+			<br>
+		</div>
+
+		<footer class="container-fluid wm-page-content text-center small">
+			<details>
+				<summary>
+					Documentation built with <a href="http://www.mkdocs.org/" target="_blank">MkDocs</a> using  <a href="https://github.com/Siphalor/mkdocs-custommill" target="_blank">CustomMill</a>.
+				</summary>
+				<h6 class="mt-2">Additional Licenses</h6>
+				<ul><li>
+						CustomMill is based on the <a href="https://github.com/gristlabs/mkdocs-windmill" target="_blank">Windmill</a> theme by Grist Labs, licensed under the <a href="https://github.com/gristlabs/mkdocs-windmill/blob/master/LICENSE" target="_blank">MIT License</a>
+					</li>
+					<li>
+						CustomMill includes <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> version 5.1.3. This is available under the <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT License</a>.
+					</li>
+					<li>
+						Syntax highlighting is implemented via <a href="https://highlightjs.org" target="_blank">highlight.js</a> licensed under the BSD 3-Clause License and the included github styling made by Vasily Polovnyov.
+					</li>
+					<li>
+						Icons on this site are from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> which is licensed under the <a href="https://fontawesome.com/license/free" target="_blank">Font Awesome Free License</a>.
+					</li></ul>
+				<p>Built at 2026-02-15 09:03:59 UTC</p>
+			</details>
+		</footer>
+
+		
+	</body>
+</html>
